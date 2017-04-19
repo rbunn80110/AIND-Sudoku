@@ -67,6 +67,8 @@ class TestNakedTwins(unittest.TestCase):
          'I3': '5', 'I4': '7', 'I5': '2', 'I6': '6', 'I7': '1', 'I8': '4', 'I9': '8'}
     ]
 
+
+
     def test_naked_twins(self):
         self.assertTrue(solution.naked_twins(self.before_naked_twins_1) in self.possible_solutions_1,
                         "Your naked_twins function produced an unexpected board.")
@@ -74,6 +76,10 @@ class TestNakedTwins(unittest.TestCase):
     def test_naked_twins2(self):
         self.assertTrue(solution.naked_twins(self.before_naked_twins_2) in self.possible_solutions_2,
                         "Your naked_twins function produced an unexpected board.")
+
+    def test_naked_twins3(self):
+        result = solution.naked_twins(self.before_naked_twins_3)
+        print(result)
 
 
 
@@ -96,3 +102,8 @@ class TestDiagonalSudoku(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+    # TestDiagonalSudoku().test_solve()
+    # TestNakedTwins().test_naked_twins()
+    # TestNakedTwins().test_naked_twins2()
+    TestNakedTwins().test_naked_twins3()
+
